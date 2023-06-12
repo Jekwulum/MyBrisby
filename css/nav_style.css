@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .header {
@@ -16,6 +17,7 @@
 
 .menu {
   font-style: italic;
+  /* background: hsl(0 0% 100% / 0.1); */
 }
 
 .header a {
@@ -61,6 +63,12 @@ nav img {
   color: rgb(26, 92, 224);
 }
 
+.close-icon {
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
 .bars-icon {
   display: none;
 }
@@ -74,6 +82,55 @@ nav img {
   nav img {
     width: 150px;
     height: 70px;
+    margin: 0;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+
+  .topnav {
+    display: none;
+  }
+
+  .responsive {
+    display: flex;
+    margin-right: 0;
+    position: fixed;
+    flex-direction: column;
+    min-width: 300px;
+    height: 100vh;
+    background: rgb(26, 92, 224);
+    color: white;
+    top: 0;
+    right: 0;
+    align-items: flex-start;
+  }
+
+  .links {
+    margin-top: 70px;
+    margin-left: 18px;
+  }
+
+  .topnav a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    margin: 10px;
+  }
+
+  .topnav a:hover {
+    color: gold;
+  }
+
+  .close-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+
+  .close-icon:hover {
+    color: gold;
   }
 
   .bars-icon {
@@ -85,34 +142,15 @@ nav img {
     background-color: rgb(26, 92, 224);
     padding: 10px;
     margin-top: 15px;
+    justify-content: start;
+    padding-top: 10px;
   }
 
-  .bars-icon:hover{
+  .bars-icon:hover {
     cursor: pointer;
   }
 
-  .responsive {
-    position: relative;
-    top: 100px;
-    background-color: red;
-  }
-
-  /* .topnav .responsive .bars-icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  } */
-
-  .topnav .responsive a {
-    float: none;
-    display: block;
-  }
-
   .header {
-    display: none;
-  }
-
-  .topnav {
     display: none;
   }
 }
