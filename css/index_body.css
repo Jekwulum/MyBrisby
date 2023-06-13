@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -97,6 +99,7 @@
   font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 10px;
+  font-family: 'Secular One', sans-serif;
 }
 
 .card button:hover {
