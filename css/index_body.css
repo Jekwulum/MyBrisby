@@ -72,6 +72,38 @@
   border-top-right-radius: 10px;
 }
 
+.card-icon {
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  color: rgb(34, 127, 203);
+  margin: 30px 0 30px 0;
+}
+
+.card h2:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.card button {
+  margin-top: 30px;
+  height: 50px;
+  width: 150px;
+  border: none;
+  background-color: rgb(34, 127, 203);
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.card button:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
 @media screen and (max-width:915px) {
   .first-top img {
     width: 100%;
@@ -112,7 +144,7 @@
   }
 
   .card {
-    width: 90%;
+    width: 70%;
   }
 
 }
