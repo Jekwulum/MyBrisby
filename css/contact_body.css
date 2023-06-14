@@ -111,6 +111,11 @@ textarea {
   .contact-form span i {
     font-size: 25px;
   }
+
+
+  .enquiries {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width:400px) {
