@@ -1,126 +1,144 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
-    background:#EFECE5;
-    width:100vw;
+
+body {
+    background: #EFECE5;
+    width: 100vw;
 }
-.form-container{
-    background:rgb(34, 127, 203);
-    width:900px;
+
+.form-container {
+    background: rgb(34, 127, 203);
+    width: 900px;
     margin-top: 40px;
-    margin-left:200px;
+    margin-left: 200px;
     display: flex;
     justify-content: space-between;
 }
-.form-img img{
-    width:100%;
-    margin-top:100px;
+
+.form-img img {
+    width: 100%;
+    margin-top: 100px;
     margin-left: 100px;
 }
-.form-class{
-    border:solid rgb(34, 127, 203) 2px;
+
+.form-class {
+    border: solid rgb(34, 127, 203) 2px;
     box-shadow: 2px 2px 2px grey;
     height: 550px;
-    width:500px;
-    background:#EFECE5;
+    width: 500px;
+    background: #EFECE5;
     padding: 20px;
     border-radius: 5px;
 }
-.form-class{
+
+.form-class {
     text-align: center;
 }
-.form-class img{
-    width:100px;
-    height:100px;
+
+.form-class img {
+    width: 100px;
+    height: 100px;
     margin-top: 20px;
     margin-bottom: 10px;
 }
-input{
+
+input {
     border-radius: 5px;
-    padding:15px;
-    width:345px;
+    padding: 15px;
+    width: 345px;
     height: 40px;
     margin: 15px;
     border: rgb(34, 127, 203) solid 2px;
     box-shadow: 2px 2px 2px grey;
 }
-#submit{
-    background:rgb(34, 127, 203);
+
+#submit {
+    background: rgb(34, 127, 203);
     color: white;
-    width:200px;
+    width: 200px;
     margin-left: 100px;
     margin-right: 100px;
 }
-.form-class a{
+
+.form-class a {
     text-decoration: none;
-    color:rgb(34, 127, 203);
+    color: rgb(34, 127, 203);
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 @media screen and (max-width:915px) {
-    .body{
-        height:50%;
+    .body {
+        height: 50%;
     }
-    .form-container{
-        align:center;
-        background:none;
+
+    .form-container {
+        align: center;
+        background: none;
         border: none;
         border-radius: none;
         box-shadow: none;
-        width:95%;
-        height:600px;
+        width: 95%;
+        height: 600px;
         margin-top: 15px;
         margin-bottom: 0px;
         margin-left: 15px;
         margin-right: 0px;
 
     }
-    .form-img{
-       display:none;
+
+    .form-img {
+        display: none;
     }
-    .form-class{
-    border: none;
-    background:none;
-    border: none;
-    border-radius: none;
-    box-shadow: none;
-    height: 100%;
+
+    .form-class {
+        border: none;
+        background: none;
+        border: none;
+        border-radius: none;
+        box-shadow: none;
+        height: 100%;
     }
-       
-    .form-class{
+
+    .form-class {
         text-align: center;
         font-size: 10px;
     }
-    .form-class img{
-        width:100px;
-        height:100px;
+
+    .form-class img {
+        width: 100px;
+        height: 100px;
         margin-top: 50px;
         margin-bottom: 30px;
     }
-    input{
+
+    input {
         border-radius: 5px;
-        padding:15px;
-        width:90%;
+        padding: 15px;
+        width: 90%;
         height: 40px;
         margin: 20px;
         border: rgb(34, 127, 203) solid 2px;
         box-shadow: 2px 2px 2px grey;
     }
-    #submit{
-        background:rgb(34, 127, 203);
+
+    #submit {
+        background: rgb(34, 127, 203);
         color: white;
-        width:40%;
+        width: 40%;
         margin-top: 20px;
         margin-left: 30%;
         margin-right: 50%;
-        padding:10px;
+        padding: 10px;
     }
-    .form-class a{
+
+    .form-class a {
         text-decoration: none;
-        color:rgb(34, 127, 203);
+        color: rgb(34, 127, 203);
         font-size: 13px;
         font-family: Arial, Helvetica, sans-serif;
     }
+}
