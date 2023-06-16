@@ -19,9 +19,10 @@ body {
 }
 
 .form-img img {
-    width: 100%;
-    margin-top: 100px;
-    margin-left: 100px;
+    width: 150%;
+    height:500px;
+    margin-top: 10px;
+    margin-left: -5px;
 }
 
 .form-class {
