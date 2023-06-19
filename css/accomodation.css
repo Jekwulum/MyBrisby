@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.blur{
+    display: flex;
+    flex-direction: column;
+}
+.bg-image{
+    background-image:url("../images/brisb.jpg");
+    background-repeat: inherit;
+    width:1338px;
+    height:562px;
+    filter: blur(3px);
+    -webkit-filter:blur(2px);
+}
+.accommodation-container{
+    display:flex;
+    margin-top: 130px;
+}
+.accommodation-text{
+    width:700px;
+    color:white;
+    font-size: 20px;
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 30px;
+    font-family: poppins;
+    text-transform: capitalize;
+}
+.accommodation-text p{
+    color: yellow;
+    font-size: 18px;
+}
+.form-class {
+    border: solid rgb(34, 127, 203) 2px;
+    color:black;
+    box-shadow: 2px 2px 2px grey;
+    height: 500px;
+    width: 330px;
+    background:#EFECE5;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top:50px;
+    margin-left: -450px;
+    position: absolute;
+}
+
+.form-class {
+    text-align: center;
+    font-size: 12px;
+}
+
+.form-class img {
+    width: 80px;
+    height: 80px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+input {
+    border-radius: 5px;
+    padding: 15px;
+    width: 90%;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    border: rgb(34, 127, 203) solid 2px;
+    box-shadow: 2px 2px 2px grey;
+}
+
+#submit {
+    background: rgb(34, 127, 203);
+    color: white;
+    width: 150px;
+    padding:10px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: 70px;
+    margin-right: 100px;
+}
+
+.form-class a {
+    text-decoration: none;
+    color: rgb(34, 127, 203);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    color:white;
+}
+@media screen and (max-width:915px) {
+    body{
+        width:100%;
+    }
+    .bg-image{
+        width:390px;
+    }
+    .form-class{
+        background: none;
+        margin-left:-370px;
+    }
+    .accommodation-text{
+        display:none;
+    }
+    .accommodation-container{
+        margin-top: 70px;
+        width:100%;
+        color:white;
+    }
+    .form-class a {
+        text-decoration: none;
+        color: yellow;
+        font-size:  15px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    p{
+        color:white;
+        font-size: 15px;
+    }
+}
