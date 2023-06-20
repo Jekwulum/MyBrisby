@@ -86,12 +86,13 @@ input {
 }
 
 #rangeValue{
+    margin-top: 10px;
     font-size: 15px;
     font-weight: bold;
 }
 
 #suburb-select {
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
