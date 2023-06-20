@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.accommodation-container {
+    background-image: url("../images/brisb.jpg");
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin-top: 130px;
+    padding: 30px;
+    padding-right: 60px;
+    /* background: green; */
+}
+
+.accommodation-text {
+    color: white;
+    font-size: 20px;
+    margin-top: 100px;
+    font-family: poppins;
+    text-transform: capitalize;
+}
+
+.accommodation-text p {
+    color: yellow;
+    font-size: 18px;
+}
+
+.form-class {
+    border: solid rgb(34, 127, 203) 2px;
+    color: black;
+    box-shadow: 2px 2px 2px grey;
+    height: 500px;
+    width: 330px;
+    background: #EFECE5;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+.form-class {
+    text-align: center;
+    font-size: 12px;
+}
+
+.form-class img {
+    width: 80px;
+    height: 80px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+input {
+    border-radius: 5px;
+    padding: 15px;
+    width: 90%;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    border: rgb(34, 127, 203) solid 2px;
+    box-shadow: 2px 2px 2px grey;
+}
+
+#submit {
+    background: rgb(34, 127, 203);
+    color: white;
+    width: 150px;
+    padding: 10px 0 20px 0;
+    height: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: all 0.6s ease;
+}
+
+#submit:hover{
+    cursor: pointer;
+    color: gold;
+}
+
+.form-class a {
+    text-decoration: none;
+    color: rgb(34, 127, 203);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    color: white;
+}
+
+@media screen and (max-width:915px) {
+
+    .accommodation-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 70px;
+        width: 100%;
+        color: white;
+    }
+
+    .accommodation-text{
+        font-size: 15px;
+    }
+
+    .form-class {
+        margin: 70px auto 0 auto;
+    }
+
+    .form-class a {
+        text-decoration: none;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .accommodation-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 70px;
+        width: 100%;
+        color: white;
+    }
+
+    #submit {
+        width: 70%;
+    }
+
+    .blur {
+        display: none;
+    }
+
+    .form-class {
+        width: 75%;
+        margin: 70px auto 0 auto;
+    }
+}

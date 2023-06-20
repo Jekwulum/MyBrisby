@@ -20,20 +20,20 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 .form-img img {
-    width: 100%;
-    margin-top: 100px;
-    margin-left: 100px;
+    width: 150%;
+    height:500px;
+    margin-top: 10px;
+    margin-left: -5px;
 }
 
 .form-class {
     border: solid rgb(34, 127, 203) 2px;
     box-shadow: 2px 2px 2px grey;
-    height: 550px;
+    height: 560px;
     width: 500px;
     background: #EFECE5;
-    padding: 20px;
+    padding: 15px;
     border-radius: 5px;
 }
 
@@ -44,7 +44,7 @@ body {
 .form-class img {
     width: 100px;
     height: 100px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -53,7 +53,7 @@ input {
     padding: 15px;
     width: 345px;
     height: 40px;
-    margin: 15px;
+    margin: 12px;
     border: rgb(34, 127, 203) solid 2px;
     box-shadow: 2px 2px 2px grey;
 }
@@ -64,6 +64,7 @@ input {
     width: 200px;
     margin-left: 100px;
     margin-right: 100px;
+    text-align:center;
 }
 
 .form-class a {
@@ -114,7 +115,7 @@ input {
     .form-class img {
         width: 100px;
         height: 100px;
-        margin-top: 50px;
+        margin-top: 30px;
         margin-bottom: 30px;
     }
 
@@ -136,6 +137,7 @@ input {
         margin-left: 30%;
         margin-right: 50%;
         padding: 10px;
+        text-align: center;
     }
 
     .form-class a {
