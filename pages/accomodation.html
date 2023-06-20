@@ -67,15 +67,22 @@
           <form>
             <input type="text" placeholder="Enter your ideal accommodation">
             <input type="email" placeholder="Enter a valid email">
-            <input type="password" placeholder="Enter your price range">
-            <input type="password" placeholder="Enter your preferred location">
+            <!-- <input type="password" placeholder="Enter your price range"> -->
+            <div class="price-label-div">
+              <label for="price-range" class="price-label">Select price range</label>
+            </div>
+            <input type="range" min="0" max="5000" step="1" value="50" id="price-range">
+            <p id="rangeValue"></p>
+            <select id="suburb-select">
+              <option value="">Select your preferred location</option>
+            </select>
             <input id="submit" type="submit" value="Submit">
             <p>Already have an account? <a href="#">Login here</a></p>
           </form>
         </div>
       </div>
     </div>
-    
+
 
 
 
