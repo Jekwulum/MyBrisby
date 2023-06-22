@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.text-group i {
+  color: rgb(34, 127, 203);
+}
+
 .pickup-container {
   background-image: url("../images/travel.png");
   background-repeat: no-repeat;
