@@ -80,7 +80,7 @@ input {
     }
 
     .form-container {
-        align: center;
+        text-align: center;
         background: none;
         border: none;
         border-radius: none;

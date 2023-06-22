@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-group i {
+  color: rgb(34, 127, 203);
+}
+
+.pickup-container {
+  background-image: url("../images/travel.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 5px solid rgb(34, 127, 203);
+  margin-top: 130px;
+  padding: 50px 0px;
+}
+
+.heading h1 {
+  margin: 5px 30px;
+  color: white;
+  text-align: center;
+}
+
+.pickup-form-div {
+  background-color: #EFECE5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
+  margin: 0px 20%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.input-div {
+  background-color: white;
+  margin: 5px 0px;
+  border-radius: 5px;
+  height: 80px;
+}
+
+.input-div-text {
+  text-align: left;
+}
+
+.text-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px;
+}
+
+.input-div-text p {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  /* margin: 8px; */
+}
+
+.input-div input,
+select {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  height: 40px;
+  padding: 15px;
+}
+
+select {
+  padding: 10px;
+}
+
+.input-div input,
+select::placeholder {
+  color: #999;
+  font-size: 20px;
+  padding: 8px;
+}
+
+option:first-child {
+  color: gray;
+  font-style: italic;
+}
+
+.input-div input,
+select:hover {
+  cursor: pointer;
+}
+
+.toggle-passengers-div:hover {
+  cursor: pointer;
+}
+
+.passengers-display {
+  text-align: left;
+}
+
+.passengers-display p {
+  height: 40px;
+  padding: 7px;
+  padding-left: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color: grey;
+}
+
+.passengers-div {
+  display: none;
+  height: 235px;
+  background-color: white;
+  margin: 5px 0px;
+  border-radius: 5px;
+}
+
+.person-type-div {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 40%; */
+  align-items: center;
+  margin: 15px;
+  height: 60px;
+}
+
+.person-desc {
+  text-align: left;
+}
+
+.person-age {
+  margin-top: 6px;
+  font-size: 13px;
+  color: rgb(104, 100, 100);
+}
+
+.person-numbers {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+  margin: 0px;
+}
+
+.person-numbers i {
+  font-size: 35px;
+  color: rgb(34, 127, 203);
+  transition: all 0.6s ease;
+}
+
+.person-numbers i:hover {
+  cursor: pointer;
+  color: rgb(20, 90, 147);
+}
+
+.persons {
+  font-weight: bold;
+}
+
+.button-div {
+  width: 75%;
+  margin: 0px auto;
+  transition: all 0.8s ease;
+}
+
+.button-div button {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  text-transform: uppercase;
+  background: rgb(34, 127, 203);
+  background: linear-gradient(90deg, rgba(34, 127, 203, 1) 42%, rgba(0, 212, 255, 1) 100%);
+  transition: all 0.6s ease;
+}
+
+.button-div button:hover {
+  cursor: pointer;
+  background: rgb(31, 135, 208);
+  background: linear-gradient(90deg, rgba(31, 135, 208, 1) 0%, rgba(0, 212, 255, 1) 0%, rgba(34, 127, 203, 1) 58%);
+}
+
+
+@media screen and (max-width:915px) {
+  .pickup-form-div {
+    margin: 0px 5%;
+  }
+
+  .button-div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .pickup-form-div {
+    margin: 0px 3%;
+  }
+}
