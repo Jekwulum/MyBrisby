@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/nav_style.css">
-    <link rel="stylesheet" href="../css/pickup.css">
-  
-    <title>studentlifebrisbane</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/nav_style.css">
+  <link rel="stylesheet" href="../css/pickup.css">
+
+  <title>studentlifebrisbane</title>
+</head>
+
 <body>
   <div>
     <div class="head">
@@ -48,7 +50,110 @@
       </nav>
     </div>
 
-    <div class="pickup-container"></div>
+    <div class="pickup-container">
+      <div class="heading">
+        <h1>Pickup</h1>
+      </div>
+
+      <div class="pickup-form-div">
+        <div class="input-div bigger">
+          <div class="input-div-text">
+            <span class="text-group">
+              <i class="fa-solid fa-plane-arrival" style="color: #227fcb;"></i>
+              <p>Arrival port</p>
+            </span>
+          </div>
+          <select id="entry-port-select">
+            <option value="">Select an Airport</option>
+          </select>
+        </div>
+
+        <div class="input-div bigger">
+          <div class="input-div-text">
+            <span class="text-group">
+              <i class="fa-solid fa-location-dot" style="color: #227fcb;"></i>
+              <p>To:</p>
+            </span>
+          </div>
+          <input type="text" placeholder="Destination">
+        </div>
+
+        <div class="input-div smaller">
+          <div class="input-div-text">
+            <span class="text-group">
+              <i class="fa-solid fa-calendar-days" style="color: #227fcb;"></i>
+              <p>Pickup date</p>
+            </span>
+          </div>
+          <input type="datetime-local">
+        </div>
+
+        <div class="input-div smaller">
+          <div class="input-div-text">
+            <span class="text-group">
+              <i class="fa-solid fa-hashtag" style="color: #227fcb;"></i>
+              <p>Flight Number</p>
+            </span>
+          </div>
+          <input type="text" placeholder="Flight Number">
+        </div>
+
+        <div class="input-div smaller">
+          <div class="input-div-text">
+            <span class="text-group">
+              <i class="fa-solid fa-users" style="color: #227fcb;"></i>
+              <p>Passengers</p>
+            </span>
+          </div>
+          <!-- <input type="number" min="1" value="1"> -->
+          <div class="passengers-display">
+            <p>5</p>
+          </div>
+        </div>
+
+        <div class="passengers-div">
+          <div class="person-type-div">
+            <div class="person-desc">
+              <p class="person-category">Adults</p>
+              <p class="person-age">+12 years</p>
+            </div>
+            <div class="person-numbers">
+              <i class="fa-solid fa-circle-minus subtract"></i>
+              <p class="persons">50</p>
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+          </div>
+
+          <div class="person-type-div">
+            <div class="person-desc">
+              <p class="person-category">Children</p>
+              <p class="person-age">2-12 years</p>
+            </div>
+            <div class="person-numbers">
+              <i class="fa-solid fa-circle-minus subtract"></i>
+              <p class="persons">50</p>
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+          </div>
+
+          <div class="person-type-div">
+            <div class="person-desc">
+              <p class="person-category">Infants</p>
+              <p class="person-age">0-2 years</p>
+            </div>
+            <div class="person-numbers">
+              <i class="fa-solid fa-circle-minus subtract"></i>
+              <p class="persons">50</p>
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="button-div">
+          <button> <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i> Search</button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer">
       <div class="footer-container">
@@ -93,4 +198,6 @@
 </body>
 <script src="https://kit.fontawesome.com/68ead2588d.js" crossorigin="anonymous"></script>
 <script src="../js/script.js"></script>
+<script src="../js/pickup_script.js"></script>
+
 </html>
