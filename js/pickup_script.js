@@ -4,7 +4,16 @@ let passengersDiv = document.querySelector(".passengers-div");
 let adultsFigure = document.querySelector('.adults-figure');
 let childrenFigure = document.querySelector('.children-figure');
 let infantsFigure = document.querySelector('.infants-figure');
+let airportSelect = document.querySelector("#entry-port-select");
 
+
+let airports = ["Brisbane Airport", "Gold Coast Airport"];
+airports.forEach(airport => {
+  const option = document.createElement("option");
+  option.value = airport;
+  option.textContent = airport;
+  airportSelect.appendChild(option);
+});
 
 togglePassengersDiv.addEventListener("click", () => {
   if (passengersDiv.style.display === 'none') {
