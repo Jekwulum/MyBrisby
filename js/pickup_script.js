@@ -47,7 +47,7 @@ function increasePassengers(category) {
 function decreasePassengers(category) {
   if (category === "adults") {
     {
-      passengersObj["adults"] == 0 ? "" : passengersObj["adults"] -= 1;
+      passengersObj["adults"] <= 1 ? "" : passengersObj["adults"] -= 1;
       adultsFigure.textContent = passengersObj["adults"];
     }
   } else if (category === "children") {

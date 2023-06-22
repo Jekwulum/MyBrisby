@@ -150,6 +150,10 @@ select:hover {
   color: rgb(20, 90, 147);
 }
 
+.persons {
+  font-weight: bold;
+}
+
 .button-div {
   width: 75%;
   margin: 0px auto;
