@@ -87,6 +87,10 @@ select:hover {
   cursor: pointer;
 }
 
+.toggle-passengers-div:hover {
+  cursor: pointer;
+}
+
 .passengers-display {
   text-align: left;
 }
@@ -98,10 +102,6 @@ select:hover {
   font-size: 20px;
   font-weight: bold;
   color: grey;
-}
-
-.passengers-display p:hover {
-  cursor: pointer;
 }
 
 .passengers-div {
