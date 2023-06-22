@@ -105,9 +105,8 @@
               <p>Passengers</p>
             </span>
           </div>
-          <!-- <input type="number" min="1" value="1"> -->
           <div class="passengers-display">
-            <p class="total-passengers"></p>
+            <p class="total-passengers">6</p>
           </div>
         </div>
 
@@ -118,9 +117,9 @@
               <p class="person-age">+12 years</p>
             </div>
             <div class="person-numbers">
-              <i class="fa-solid fa-circle-minus subtract"></i>
-              <p class="persons">50</p>
-              <i class="fa-solid fa-circle-plus"></i>
+              <i class="fa-solid fa-circle-minus subtract" onclick="decreasePassengers('adults')"></i>
+              <p class="persons adults-figure"></p>
+              <i class="fa-solid fa-circle-plus" onclick="increasePassengers('adults')"></i>
             </div>
           </div>
 
@@ -130,9 +129,9 @@
               <p class="person-age">2-12 years</p>
             </div>
             <div class="person-numbers">
-              <i class="fa-solid fa-circle-minus subtract"></i>
-              <p class="persons">50</p>
-              <i class="fa-solid fa-circle-plus"></i>
+              <i class="fa-solid fa-circle-minus subtract" onclick="decreasePassengers('children')"></i>
+              <p class="persons children-figure"></p>
+              <i class="fa-solid fa-circle-plus" onclick="increasePassengers('children')"></i>
             </div>
           </div>
 
@@ -142,9 +141,9 @@
               <p class="person-age">0-2 years</p>
             </div>
             <div class="person-numbers">
-              <i class="fa-solid fa-circle-minus subtract"></i>
-              <p class="persons">50</p>
-              <i class="fa-solid fa-circle-plus"></i>
+              <i class="fa-solid fa-circle-minus subtract" onclick="decreasePassengers('infants')"></i>
+              <p class="persons infants-figure"></p>
+              <i class="fa-solid fa-circle-plus" onclick="increasePassengers('infants')"></i>
             </div>
           </div>
         </div>
