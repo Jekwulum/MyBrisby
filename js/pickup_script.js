@@ -5,6 +5,18 @@ let adultsFigure = document.querySelector('.adults-figure');
 let childrenFigure = document.querySelector('.children-figure');
 let infantsFigure = document.querySelector('.infants-figure');
 let airportSelect = document.querySelector("#entry-port-select");
+let genderSelect = document.querySelector("#gender-port-select");
+
+
+let genders = ['Male', 'Female', 'Non-Binary', 'Genderqueer', 'Genderfluid',
+  'Agender', 'Bigender', 'Two-Spirit', 'Transgender', 'Cisgender', 'Demigender',
+  'Neutrois', 'Androgynous', 'Pangender', 'Gender Nonconforming', 'Other'];
+genders.forEach(gender => {
+  const option = document.createElement("option");
+  option.value = gender;
+  option.textContent = gender;
+  genderSelect.appendChild(option);
+});
 
 
 let airports = ["Brisbane Airport", "Gold Coast Airport"];
