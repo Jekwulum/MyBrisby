@@ -105,6 +105,7 @@ select:hover {
 }
 
 .passengers-div {
+  display: none;
   height: 235px;
   background-color: white;
   margin: 5px 0px;
