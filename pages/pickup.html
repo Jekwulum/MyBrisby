@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/nav_style.css">
+  <link rel="stylesheet" href="../css/pickup.css">
+
+  <title>studentlifebrisbane</title>
+</head>
+
+<body>
+  <div>
+    <div class="head">
+      <div class="header">
+        <a href="index.html">
+          <h3>studentlifebrisbane</h3>
+        </a>
+        <div class="menu">
+          <a href="../pages/sign_in.html">Sign in</a>
+          <a href="../pages/register.html">Register</a>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html"><img src="../images/brisby-logoe.png"></a>
+
+        <div class="topnav" id="myTopnav">
+          <div class="close-icon">
+            <i class="fa-solid fa-times"></i>
+          </div>
+          <div class="links">
+            <a href="accomodation.html">Accomodation</a>
+            <a href="pickup.html">Airport Pickup</a>
+            <a href="about-us.html">About Us</a>
+            <a href="contact-us.html">Contact Us</a>
+
+            <div class="mobile-menu">
+              <a href="sign_in.html">Sign in</a>
+              <a href="register.html">Register</a>
+            </div>
+          </div>
+        </div>
+        <div class="bars-icon">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+
+    <div class="pickup-container">
+      <div class="heading">
+        <h1>Airport Pickup</h1>
+      </div>
+
+      <div class="pickup-form-div">
+        <div class="input-div bigger">
+          <div class="input-div-text">
+            <span class="text-group">
+              <i class="fa-solid fa-plane-arrival" style="color: #227fcb;"></i>
+              <p>Arrival port</p>
+            </span>
+          </div>
+          <select id="entry-port-select">
+            <option value="">Select an Airport</option>
+          </select>
+        </div>
+
+        <div class="input-div bigger">
+          <div class="input-div-text">
+            <span class="text-group">
+              <i class="fa-solid fa-location-dot" style="color: #227fcb;"></i>
+              <p>To:</p>
+            </span>
+          </div>
+          <input type="text" placeholder="Destination">
+        </div>
+
+        <div class="input-div smaller">
+          <div class="input-div-text">
+            <span class="text-group">
+              <i class="fa-solid fa-calendar-days" style="color: #227fcb;"></i>
+              <p>Pickup date</p>
+            </span>
+          </div>
+          <input type="datetime-local">
+        </div>
+
+        <div class="input-div smaller">
+          <div class="input-div-text">
+            <span class="text-group">
+              <i class="fa-solid fa-hashtag" style="color: #227fcb;"></i>
+              <p>Flight Number</p>
+            </span>
+          </div>
+          <input type="text" placeholder="Flight Number">
+        </div>
+
+        <div class="input-div toggle-passengers-div">
+          <div class="input-div-text">
+            <span class="text-group">
+              <i class="fa-solid fa-users" style="color: #227fcb;"></i>
+              <p>Passengers</p>
+            </span>
+          </div>
+          <div class="passengers-display">
+            <p class="total-passengers">6</p>
+          </div>
+        </div>
+
+        <div class="passengers-div">
+          <div class="person-type-div">
+            <div class="person-desc">
+              <p class="person-category">Adults</p>
+              <p class="person-age">+12 years</p>
+            </div>
+            <div class="person-numbers">
+              <i class="fa-solid fa-circle-minus subtract" onclick="decreasePassengers('adults')"></i>
+              <p class="persons adults-figure"></p>
+              <i class="fa-solid fa-circle-plus" onclick="increasePassengers('adults')"></i>
+            </div>
+          </div>
+
+          <div class="person-type-div">
+            <div class="person-desc">
+              <p class="person-category">Children</p>
+              <p class="person-age">2-12 years</p>
+            </div>
+            <div class="person-numbers">
+              <i class="fa-solid fa-circle-minus subtract" onclick="decreasePassengers('children')"></i>
+              <p class="persons children-figure"></p>
+              <i class="fa-solid fa-circle-plus" onclick="increasePassengers('children')"></i>
+            </div>
+          </div>
+
+          <div class="person-type-div">
+            <div class="person-desc">
+              <p class="person-category">Infants</p>
+              <p class="person-age">0-2 years</p>
+            </div>
+            <div class="person-numbers">
+              <i class="fa-solid fa-circle-minus subtract" onclick="decreasePassengers('infants')"></i>
+              <p class="persons infants-figure"></p>
+              <i class="fa-solid fa-circle-plus" onclick="increasePassengers('infants')"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="button-div">
+          <button> <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i> Search</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Get Connected</h4>
+            <ul>
+              <li><a href="about-us.html">about us</a></li>
+              <li><a href="contact-us.html">contact us</a></li>
+              <li><a href="sign_in.html">Sign in</a></li>
+              <li><a href="register.html">register</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="accomodation.html">Accomodation</a></li>
+              <li><a href="#">airport pickup</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>discover brisbane</h4>
+            <ul>
+              <li><a href="#">explore communities</a></li>
+              <li><a href="#">find events</a></li>
+              <li><a href="#">explore brisbane</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="https://kit.fontawesome.com/68ead2588d.js" crossorigin="anonymous"></script>
+<script src="../js/script.js"></script>
+<script src="../js/pickup_script.js"></script>
+
+</html>

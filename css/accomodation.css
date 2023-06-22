@@ -1,50 +1,44 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-.blur{
+
+.accommodation-container {
+    background-image: url("../images/brisb.jpg");
     display: flex;
-    flex-direction: column;
-}
-.bg-image{
-    background-image:url("../images/brisb.jpg");
-    background-repeat: inherit;
-    width:1338px;
-    height:562px;
-    filter: blur(3px);
-    -webkit-filter:blur(2px);
-}
-.accommodation-container{
-    display:flex;
+    justify-content: space-evenly;
+    gap: 30px;
     margin-top: 130px;
+    padding: 30px;
+    padding-right: 60px;
+    /* background: green; */
 }
-.accommodation-text{
-    width:700px;
-    color:white;
+
+.accommodation-text {
+    color: white;
     font-size: 20px;
-    position: absolute;
-    margin-top: 150px;
-    margin-left: 30px;
+    margin-top: 100px;
     font-family: poppins;
     text-transform: capitalize;
 }
-.accommodation-text p{
-    color: white;
+
+.accommodation-text p {
+    color: yellow;
     font-size: 18px;
 }
+
 .form-class {
     border: solid rgb(34, 127, 203) 2px;
-    color:black;
+    color: black;
     box-shadow: 2px 2px 2px grey;
-    height: 500px;
+    /* height: 500px; */
     width: 330px;
-    background:#EFECE5;
+    background: #EFECE5;
     padding: 15px;
+    padding-bottom: 30px;
     border-radius: 5px;
-    margin-top:50px;
-    margin-left: -450px;
-    position: absolute;
+    margin-top: 0px;
 }
 
 .form-class {
@@ -63,23 +57,70 @@ input {
     border-radius: 5px;
     padding: 15px;
     width: 90%;
-    height: 30px;
-    margin-right: 10px;
+    height: 40px;
+    /* margin-right: 10px; */
     margin-bottom: 0px;
     margin-top: 20px;
-    border: rgb(34, 127, 203) solid 2px;
+    border: none;
+    outline: none;
     box-shadow: 2px 2px 2px grey;
+}
+
+.price-label-div {
+    margin-top: 20px;
+    padding: 0px 15px;
+    padding-left: 19px;
+    text-align: left;
+}
+
+.price-label {
+    margin-top: 500px;
+    text-align: left;
+    font-size: 15px;
+}
+
+#price-range {
+    border: 12px solid rgb(34, 127, 203);
+    padding: 0px;
+    margin-top: 0px;
+}
+
+#rangeValue{
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#suburb-select {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#suburb-select:focus {
+    outline: none;
+}
+
+#suburb-select option {
+    padding: 5px;
 }
 
 #submit {
     background: rgb(34, 127, 203);
     color: white;
     width: 150px;
-    padding:10px;
+    padding: 10px 0 20px 0;
     height: 30px;
     margin-bottom: 10px;
-    margin-left: 70px;
-    margin-right: 100px;
+    text-align: center;
+    transition: all 0.6s ease;
+}
+
+#submit:hover {
+    cursor: pointer;
+    color: gold;
 }
 
 .form-class a {
@@ -88,36 +129,64 @@ input {
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
-    color:white;
+
+body {
+    color: white;
 }
+
 @media screen and (max-width:915px) {
-    body{
-        width:100%;
-    }
-    .bg-image{
-        width:390px;
-    }
-    .form-class{
-        background: none;
-        margin-left:-370px;
-    }
-    .accommodation-text{
-        display:none;
-    }
-    .accommodation-container{
+
+    .accommodation-container {
+        display: flex;
+        justify-content: center;
         margin-top: 70px;
-        width:100%;
-        color:white;
+        width: 100%;
+        color: white;
     }
+
+    .accommodation-text {
+        font-size: 15px;
+    }
+
+    .form-class {
+        margin: 70px auto 0 auto;
+    }
+
     .form-class a {
         text-decoration: none;
-        color: yellow;
-        font-size:  15px;
+        font-size: 15px;
         font-family: Arial, Helvetica, sans-serif;
     }
-    p{
-        color:white;
+
+    #suburb-select {
+        width: 90%;
+        font-size: 12px;
+    }
+
+    p {
         font-size: 15px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .accommodation-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 70px;
+        width: 100%;
+        color: white;
+    }
+
+    #submit {
+        width: 70%;
+    }
+
+    .blur {
+        display: none;
+    }
+
+    .form-class {
+        width: 95%;
+        margin: 70px auto 0 auto;
     }
 }
