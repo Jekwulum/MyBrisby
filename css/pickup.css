@@ -140,7 +140,7 @@ select:hover {
   justify-content: space-evenly;
   align-items: center;
   width: 70%;
-  margin: 20px;
+  margin: 0px;
 }
 
 .person-numbers i {
