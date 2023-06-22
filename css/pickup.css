@@ -6,6 +6,8 @@
 
 .pickup-container {
   background-image: url("../images/travel.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   border-top: 5px solid rgb(34, 127, 203);
   margin-top: 130px;
   padding: 50px 0px;
@@ -14,6 +16,7 @@
 .heading h1 {
   margin: 5px 30px;
   color: white;
+  text-align: center;
 }
 
 .pickup-form-div {
@@ -33,9 +36,6 @@
   margin: 5px 0px;
   border-radius: 5px;
   height: 80px;
-  /* display: flex;
-  flex-direction: column; */
-  /* align-items: flex-end; */
 }
 
 .input-div-text {
