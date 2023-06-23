@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: #EFECE5;
 }
@@ -88,11 +92,6 @@ body {
   margin: 30px 0 30px 0;
 }
 
-.card h2:hover {
-  color: black;
-  cursor: pointer;
-}
-
 .card button {
   margin-top: 30px;
   height: 50px;
@@ -104,6 +103,15 @@ body {
   text-transform: uppercase;
   margin-bottom: 10px;
   font-family: 'Secular One', sans-serif;
+}
+
+.card a {
+  text-decoration: none;
+  color: white;
+}
+
+.card button a:hover {
+  color: white;
 }
 
 .card button:hover {
