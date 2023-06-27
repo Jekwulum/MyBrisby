@@ -1,0 +1,1 @@
+const exploreBrisbaneContainer = document.querySelector('.explore-brisbane-container');
