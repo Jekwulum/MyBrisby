@@ -4,12 +4,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <title>Studentlifebrisbane</title>
 </head>
 
 <body>
+  <div class="dashboard-container">
+    <nav>
+      Studentlifebrisbane
+    </nav>
 
+    <div class="body">
+      <div class="d-first">
+        <h2>Welcome John Doe</h2>
+        <button>Add Staff</button>
+      </div>
+
+      <div class="d-second">
+        <div id="bookings" class="bookings card" onclick="toggleIcon('icon1', 'bookings')">
+          <span class="type">
+            <p>Accommodation Requests</p>
+            <i id="icon1" class="fa-solid fa-circle-chevron-down"></i>
+          </span>
+        </div>
+
+        <div id="pickups" class="pickups card" onclick="toggleIcon('icon2', 'pickups')">
+          <span class="type">
+            <p>Airport Pickup Requests</p>
+            <i id="icon2" class="fa-solid fa-circle-chevron-down"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 <script src="../js/dashboard.js"></script>
+<script src="https://kit.fontawesome.com/68ead2588d.js" crossorigin="anonymous"></script>
 
 </html>
