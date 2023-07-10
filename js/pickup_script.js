@@ -8,9 +8,7 @@ let airportSelect = document.querySelector("#entry-port-select");
 let genderSelect = document.querySelector("#gender-port-select");
 
 
-let genders = ['Male', 'Female', 'Non-Binary', 'Genderqueer', 'Genderfluid',
-  'Agender', 'Bigender', 'Two-Spirit', 'Transgender', 'Cisgender', 'Demigender',
-  'Neutrois', 'Androgynous', 'Pangender', 'Gender Nonconforming', 'Other'];
+let genders = ['Male', 'Female'];
 genders.forEach(gender => {
   const option = document.createElement("option");
   option.value = gender;

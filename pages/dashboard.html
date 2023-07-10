@@ -17,22 +17,35 @@
     <div class="body">
       <div class="d-first">
         <h2>Welcome John Doe</h2>
-        <button>Add Staff</button>
+        <button onclick="toggleAddStaff()">Add Staff</button>
+
+        <div id="add-staff" class="add-staff">
+          <input type="text" id="staff-name" placeholder="enter name">
+          <input type="email" id="staff-email" placeholder="enter email">
+          <input type="password" id="staff-password" placeholder="enter password">
+          <input type="password" id="staff-re-password" placeholder="re-enter password">
+          <button onclick="submitStaffData()">submit</button>
+        </div>
       </div>
 
       <div class="d-second">
-        <div id="bookings" class="bookings card" onclick="toggleIcon('icon1', 'bookings')">
+
+        <div id="bookings" class="bookings card">
           <span class="type">
-            <p>Accommodation Requests</p>
-            <i id="icon1" class="fa-solid fa-circle-chevron-down"></i>
+            <p class="type-head">Accommodation Requests</p>
+            <i id="icon1" class="fa-solid fa-circle-chevron-down" onclick="toggleIcon('icon1', 'bookings')"></i>
           </span>
+
+          <span id="content-div"></span>
         </div>
 
-        <div id="pickups" class="pickups card" onclick="toggleIcon('icon2', 'pickups')">
+        <div id="pickups" class="pickups card">
           <span class="type">
-            <p>Airport Pickup Requests</p>
-            <i id="icon2" class="fa-solid fa-circle-chevron-down"></i>
+            <p class="type-head">Airport Pickup Requests</p>
+            <i id="icon2" class="fa-solid fa-circle-chevron-down" onclick="toggleIcon('icon2', 'pickups')"></i>
           </span>
+
+          <span id="content-div2"></span>
         </div>
       </div>
     </div>
@@ -40,5 +53,5 @@
 </body>
 <script src="../js/dashboard.js"></script>
 <script src="https://kit.fontawesome.com/68ead2588d.js" crossorigin="anonymous"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </html>

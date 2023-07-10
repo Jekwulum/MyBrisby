@@ -1,7 +1,8 @@
 document.getElementById("submit").addEventListener("click", (e) => {
   e.preventDefault();
-  let email = document.getElementById("username");
-  let password = document.getElementById("password");
+  let email = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
+  
 
   authenticateUser(email, password)
     .then((token) => {
@@ -22,7 +23,7 @@ const authenticateUser = (email, password) => {
     fetch(url, {
       method: "POST",
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+      body: JSON.stringify({email, password})
     })
       .then((response) => {
         if (response.ok) {
