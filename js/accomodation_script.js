@@ -1,4 +1,4 @@
-let BASE_URL = "http://localhost:4000";
+let BASE_URL = "https://studentlifebrisbane-api.onrender.com";
 let genderSelect = document.querySelector(".select-gender");
 
 let genders = ['Male', 'Female', 'other'];

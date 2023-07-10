@@ -1,4 +1,4 @@
-let BASE_URL = "http://localhost:4000";
+let BASE_URL = "https://studentlifebrisbane-api.onrender.com";
 function sendData() {
   let name = document.getElementById('name').value;
   let email = document.getElementById('email').value;

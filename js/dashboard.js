@@ -1,4 +1,5 @@
-let BASE_URL = "http://localhost:4000";
+// let BASE_URL = "https://studentlifebrisbane-api.onrender.com";
+let BASE_URL = "https://studentlifebrisbane-api.onrender.com";
 
 window.addEventListener("DOMContentLoaded", () => {
   let token = sessionStorage.getItem("token");
