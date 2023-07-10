@@ -30,6 +30,8 @@ cardIcons.forEach((cardIcon) => {
   });
 });
 
+rangeValue.textContent = `$${rangeInput.value}`;
+
 let suburbs = ["Brisbane City", "South Brisbane", "Fortitude Valley", "New Farm",
   "Paddington", "West End", "Spring Hill", "Kangaroo Point",
   "Milton", "Toowong", "Indooroopilly", "St Lucia",
