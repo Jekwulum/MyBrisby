@@ -1,7 +1,9 @@
 document.getElementById("submit").addEventListener("click", (e) => {
   e.preventDefault();
-  let email = document.getElementById("username").value;
+  let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
+
+
   
 
   authenticateUser(email, password)
@@ -16,9 +18,10 @@ document.getElementById("submit").addEventListener("click", (e) => {
 });
 
 const authenticateUser = (email, password) => {
+  
   return new Promise((resolve, reject) => {
     // call API
-    let BASE_URL = "localhost:4000";
+    let BASE_URL = "http://localhost:4000";
     let url = `${BASE_URL}/auth/login`;
     fetch(url, {
       method: "POST",

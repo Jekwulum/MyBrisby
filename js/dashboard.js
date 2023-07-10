@@ -1,12 +1,32 @@
+let BASE_URL = "http://localhost:4000";
+
 window.addEventListener("DOMContentLoaded", () => {
   let token = sessionStorage.getItem("token");
 
-  // if (!token) {
-  //   window.location.href = 'index.html';
-  // }
-});
+  if (!token) {
+    window.location.href = 'sign_in.html';
+  }
 
-let BASE_URL = "http://localhost:4000";
+  let url = `${BASE_URL}/auth/user`;
+  fetch(url, {
+    method: "GET",
+    headers: { 'authorization': 'Bearer ' + token, 'Content-Type': 'application/json' }
+  })
+    .then((response) => {
+      if (response.ok) {
+        const loadingSection = document.getElementById('loading-section');
+        loadingSection.style.display = "none";
+        return response.json();
+      }
+      else {
+        throw new Error("Authentication failed");
+      }
+    }).then(({ data: responseData }) => {
+      let welcomeHeader = document.getElementById("welcome-header");
+      welcomeHeader.textContent = `Welcome ${responseData.name}`;
+    })
+    .catch(error => reject(error.message))
+});
 
 function toggleAddStaff() {
   let addStaffDiv = document.getElementById("add-staff");
@@ -23,29 +43,36 @@ function submitStaffData() {
   let password = document.getElementById("staff-password").value;
   let re_password = document.getElementById("staff-re-password").value;
 
-  let payload = { name, email, password, re_password };
-  console.log(payload);
-  let url = `${BASE_URL}/auth/register`;
-  fetch(url, {
-    method: "POST",
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload)
-  })
-    .then(response => response.json())
-    .then((data) => {
-      console.log(data);
-      if (data.status !== "SUCCESS"){
-        alert(data.message);
-      }
-      else {
-        alert(data.message);
-        window.location.href = "dashboard.html";
-      }
+  if (!name) {
+    alert("name cannot be blank");
+  } else if (!validateEmail(email)) {
+    alert('Invalid email');
+  } else if (!validatePassword(password)) {
+    alert('Invalid password');
+  } else if (password !== re_password) {
+    alert("passwords do not match");
+  } else {
+    let payload = { name, email, password, re_password };
+    let url = `${BASE_URL}/auth/register`;
+    fetch(url, {
+      method: "POST",
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
     })
-    .catch(error => {
-      alert(error.message);
-      console.error(error);
-    })
+      .then(response => response.json())
+      .then((data) => {
+        if (data.status !== "SUCCESS") {
+          alert(data.message);
+        }
+        else {
+          alert(data.message);
+          window.location.href = "dashboard.html";
+        }
+      })
+      .catch(error => {
+        alert(error.message);
+      })
+  }
 };
 
 function toggleIcon(iconId, divClass) {
@@ -131,8 +158,19 @@ function addPickupsContent(div) {
         resolveButton.classList.add("resolve-button");
         resolveButton.textContent = "resolve";
 
+        resolveButton.addEventListener("click", (e) => {
+          url = `${url}/${entry._id}`;
+          fetch(url, { method: "PATCH", headers: { 'Content-Type': 'application/json' } })
+            .then(response => response.json())
+            .then(function (data) {
+              alert(data.message);
+              window.location.href = 'dashboard.html';
+            })
+            .catch(error => alert(error.message));
+        });
+
         lastElement.appendChild(passengers);
-        lastElement.appendChild(resolveButton);
+        entry.resolved ? "" : lastElement.appendChild(resolveButton);
 
         contentDiv.appendChild(resolvedTag);
         contentDiv.appendChild(name);
@@ -150,7 +188,7 @@ function addPickupsContent(div) {
 
       div.appendChild(content);
     })
-    .catch((error) => console.log("error: ", error));
+    .catch((error) => alert(error.message));
 };
 
 function addAccommodationContent(div) {
@@ -202,6 +240,16 @@ function addAccommodationContent(div) {
         let resolveButton = document.createElement('button');
         resolveButton.classList.add("resolve-button");
         resolveButton.textContent = "resolve";
+        resolveButton.addEventListener("click", (e) => {
+          url = `${url}/${entry._id}`;
+          fetch(url, { method: "PATCH", headers: { 'Content-Type': 'application/json' } })
+            .then(response => response.json())
+            .then(function (data) {
+              alert(data.message);
+              window.location.href = 'dashboard.html';
+            })
+            .catch(error => alert(error.message));
+        });
 
         lastElement.appendChild(location);
         entry.resolved ? "" : lastElement.appendChild(resolveButton);
@@ -219,7 +267,7 @@ function addAccommodationContent(div) {
 
       div.appendChild(content);
     })
-    .catch((error) => console.log("error: ", error));
+    .catch((error) => alert(error.message));
 };
 
 function dateFormatter(dateStr) {
@@ -238,6 +286,23 @@ function dateFormatter(dateStr) {
   let formattedDate = formatter.format(date);
 
   return formattedDate;
+};
+
+function validateEmail(email) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(email);
 }
 
-function getData() { }
+function validatePassword(password) {
+  const lengthPattern = /.{6,}/;  // At least 6 characters
+  const symbolPattern = /[!@#$%^&*]/;  // Contains at least one symbol
+  const uppercasePattern = /[A-Z]/;  // Contains at least one uppercase letter
+  const numberPattern = /[0-9]/;  // Contains at least one number
+
+  return (
+    lengthPattern.test(password) &&
+    symbolPattern.test(password) &&
+    uppercasePattern.test(password) &&
+    numberPattern.test(password)
+  );
+}
