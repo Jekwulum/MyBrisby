@@ -1,22 +1,15 @@
 let BASE_URL = "https://studentlifebrisbane-api.onrender.com";
-let genderSelect = document.querySelector(".select-gender");
-
-let genders = ['Male', 'Female', 'other'];
-genders.forEach(gender => {
-  const option = document.createElement("option");
-  option.value = gender;
-  option.textContent = gender;
-  genderSelect.appendChild(option);
-});
-
 function sendData() {
   let name = document.getElementById('name').value;
   let email = document.getElementById('email').value;
   let phone = document.getElementById('tel').value;
-  let ideal_accommodation = document.getElementById('accommodation').value;
-  let gender = document.getElementById('gender').value;
-  let price_range = document.getElementById('price-range').value;
-  let location = document.getElementById('suburb-select').value;
+  let gender = document.getElementById('gender-port-select').value;
+  let school = document.getElementById('school_name').value;
+  let airport_name = document.getElementById('entry-port-select').value;
+  let destination = document.getElementById('destination').value;
+  let pickup_date = document.getElementById('date').value;
+  let flight_number = document.getElementById('flight_number').value;
+  let passengers = Number(document.getElementById('total_passengers').textContent);
 
   if (!name) {
     alert("name cannot be blank");
@@ -25,9 +18,10 @@ function sendData() {
     alert('Invalid email');
   }
   else {
-    let payload = { name, email, phone, ideal_accommodation, gender, price_range, location };
-    let url = `${BASE_URL}/services/accommodation`;
-    // console.log(payload);
+    let payload = { name, email, phone, gender, school, airport_name, destination, pickup_date, flight_number, passengers };
+    console.log(payload)
+    let url = `${BASE_URL}/services/booking`;
+
     fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -47,7 +41,6 @@ function sendData() {
       })
   }
 };
-
 function validateEmail(email) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailPattern.test(email);

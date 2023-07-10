@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background: #EFECE5;
+}
+
+#loading-section {
+  font-size: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  color: rgb(34, 127, 203);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.dashboard-container nav {
+  background-color: rgb(34, 127, 203);
+  color: white;
+  height: 40px;
+  padding: 10px;
+}
+
+.body {
+  padding: 0 15px;
+  background: #EFECE5;
+}
+
+.d-first {
+  padding-top: 30px;
+  color: rgb(34, 127, 203);
+}
+
+.d-first button {
+  width: 90px;
+  height: 30px;
+  border: none;
+  background-color: rgb(34, 127, 203);
+  color: white;
+  border-radius: 4px;
+}
+.d-first button:hover{
+  cursor: pointer;
+}
+.add-staff{
+  margin: 0 auto;
+  margin-top: 10px;
+  display: none;
+  flex-direction: column;
+  width: 350px;
+  padding: 10px 5px;
+}
+
+.add-staff input{
+  width: 95%;
+  margin-bottom: 5px;
+  height: 30px;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.add-staff button{
+  margin: auto;
+}
+
+.card {
+  margin: auto;
+  margin-top: 25px;
+  height: 60px;
+  width: 75%;
+  background-color: white;
+  padding: 10px;
+  color: rgb(34, 127, 203);
+}
+
+.card {
+  transition: 0.5s;
+}
+
+.type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.type p {
+  font-size: 25px;
+}
+
+.type i {
+  font-size: 35px;
+}
+
+.type-head {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.type:hover {
+  cursor: pointer;
+}
+
+.fa-circle-chevron-down {
+  transition: 0.7s;
+}
+
+.fa-circle-chevron-up {
+  transition: 0.7s;
+  /* transform: rotate(180deg); */
+}
+
+.resolved {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.resolved-icon {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.resolved-icon.true {
+  background-color: green;
+}
+
+.resolved-icon.false {
+  background-color: gold;
+}
+
+.request {
+  border-bottom: 2px solid rgb(34, 127, 203);
+  margin-bottom: 20px;
+}
+
+.lastElement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.resolve-button {
+  border: none;
+  width: 20%;
+  height: 30px;
+  background-color: rgb(34, 127, 203);
+  color: white;
+  border-radius: 3px;
+}
+
+.resolve-button:hover{
+  cursor: pointer;
+}
+
+@media screen and (max-width:600px) {
+  .d-first h2 {
+    font-size: 20px;
+  }
+
+  .card {
+    width: 95%;
+  }
+
+  .type p {
+    font-size: 15px;
+  }
+
+  .type i {
+    font-size: 20px;
+  }
+
+  #loading-section {
+    font-size: 70px;
+  }
+}

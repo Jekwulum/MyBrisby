@@ -64,7 +64,7 @@
               <p>Name</p>
             </span>
           </div>
-          <input type="text" placeholder="Enter name">
+          <input type="text" placeholder="Enter name" id="name" required>
         </div>
 
         <div class="input-div contact-info">
@@ -74,7 +74,7 @@
               <p>Email</p>
             </span>
           </div>
-          <input type="text" placeholder="Enter email">
+          <input type="text" placeholder="Enter email" id="email" required>
         </div>
 
         <div class="input-div contact-info">
@@ -84,7 +84,7 @@
               <p>Phone</p>
             </span>
           </div>
-          <input type="tel" placeholder="Enter phone">
+          <input type="tel" placeholder="Enter phone" id="tel" required>
         </div>
 
         <div class="input-div bigger">
@@ -94,7 +94,7 @@
               <p>Gender</p>
             </span>
           </div>
-          <select id="gender-port-select">
+          <select id="gender-port-select" required>
             <option value="">Select gender</option>
           </select>
         </div>
@@ -106,7 +106,7 @@
               <p>School</p>
             </span>
           </div>
-          <input type="tel" placeholder="Enter school name">
+          <input type="tel" placeholder="Enter school name" id="school_name" required>
         </div>
 
         <div class="input-div bigger">
@@ -116,7 +116,7 @@
               <p>Arrival Airport</p>
             </span>
           </div>
-          <select id="entry-port-select">
+          <select id="entry-port-select" required>
             <option value="">Select an Airport</option>
           </select>
         </div>
@@ -128,7 +128,7 @@
               <p>To:</p>
             </span>
           </div>
-          <input type="text" placeholder="Destination">
+          <input type="text" placeholder="Destination" id="destination" required>
         </div>
 
         <div class="input-div smaller">
@@ -138,7 +138,7 @@
               <p>Pickup date</p>
             </span>
           </div>
-          <input type="datetime-local">
+          <input type="datetime-local" id="date" required>
         </div>
 
         <div class="input-div smaller">
@@ -148,7 +148,7 @@
               <p>Flight Number</p>
             </span>
           </div>
-          <input type="text" placeholder="Flight Number">
+          <input type="text" placeholder="Flight Number" id="flight_number" required>
         </div>
 
         <div class="input-div toggle-passengers-div">
@@ -159,7 +159,7 @@
             </span>
           </div>
           <div class="passengers-display">
-            <p class="total-passengers">6</p>
+            <p class="total-passengers" id="total_passengers" required></p>
           </div>
         </div>
 
@@ -202,7 +202,7 @@
         </div>
 
         <div class="button-div">
-          <button></i> Submit</button>
+          <button onclick="sendData()" class="submitBtn">send</button>
         </div>
       </div>
     </div>
@@ -251,5 +251,6 @@
 <script src="https://kit.fontawesome.com/68ead2588d.js" crossorigin="anonymous"></script>
 <script src="../js/script.js"></script>
 <script src="../js/pickup_script.js"></script>
+<script src="../js/pickup_connectbackend.js"></script>
 
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <title>Studentlifebrisbane</title>
+</head>
+
+<body>
+  <div class="dashboard-container">
+    <nav>
+      Studentlifebrisbane
+    </nav>
+
+    <div class="body">
+      <section id="loading-section">
+        <div class="loading-icon">
+          <i class="fa-solid fa-spinner fa-spin"></i>
+        </div>
+      </section>
+
+
+      <div class="d-first">
+        <h2 id="welcome-header"></h2>
+        <button onclick="toggleAddStaff()">Add Staff</button>
+
+        <div id="add-staff" class="add-staff">
+          <input type="text" id="staff-name" placeholder="enter name">
+          <input type="email" id="staff-email" placeholder="enter email">
+          <input type="password" id="staff-password" placeholder="enter password">
+          <input type="password" id="staff-re-password" placeholder="re-enter password">
+          <button onclick="submitStaffData()">submit</button>
+        </div>
+      </div>
+
+      <div class="d-second">
+
+        <div id="bookings" class="bookings card">
+          <span class="type">
+            <p class="type-head">Accommodation Requests</p>
+            <i id="icon1" class="fa-solid fa-circle-chevron-down" onclick="toggleIcon('icon1', 'bookings')"></i>
+          </span>
+
+          <span id="content-div"></span>
+        </div>
+
+        <div id="pickups" class="pickups card">
+          <span class="type">
+            <p class="type-head">Airport Pickup Requests</p>
+            <i id="icon2" class="fa-solid fa-circle-chevron-down" onclick="toggleIcon('icon2', 'pickups')"></i>
+          </span>
+
+          <span id="content-div2"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../js/dashboard.js"></script>
+<script src="https://kit.fontawesome.com/68ead2588d.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

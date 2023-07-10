@@ -112,18 +112,21 @@ select {
     padding: 5px;
 }
 
-#submit {
+.submitBtn {
     background: rgb(34, 127, 203);
     color: white;
     width: 150px;
-    padding: 10px 0 20px 0;
+    padding: 10px 0 25px 0;
     height: 30px;
+    margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
     transition: all 0.6s ease;
+    border: none;
+    border-radius: 4px;
 }
 
-#submit:hover {
+.submitBtn:hover {
     cursor: pointer;
     color: gold;
 }
