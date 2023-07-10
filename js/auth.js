@@ -3,9 +3,6 @@ document.getElementById("submit").addEventListener("click", (e) => {
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
-
-  
-
   authenticateUser(email, password)
     .then((token) => {
       sessionStorage.setItem("token", token);
