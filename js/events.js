@@ -1,0 +1,36 @@
+const eventContainer = document.getElementById("events");
+
+const paragraphTexts = {
+  "Brisbane Festival (September)": "Brisbane Festival in September is an exhilarating cultural extravaganza that fills the city with arts, music, dance, and theater. With captivating performances from local and international artists, dazzling fireworks along the Brisbane River, and a vibrant atmosphere of celebration, the festival promises an unforgettable experience that will leave you thrilled and inspired. As a tourist, you'll be immersed in the infectious excitement and creative spirit that makes Brisbane Festival a must-attend event!",
+  "Brisbane Comedy Festival (March)": "Brisbane Comedy Festival in March is an absolute riot of laughter that you won't want to miss! Featuring a diverse array of hilarious stand-up acts, side-splitting improv performances, and comedic brilliance from both local and international comedians, the festival promises endless amusement and entertainment. Whether you're a comedy enthusiast or just looking for a good time, the festival's lively and electric atmosphere will have you laughing, smiling, and sharing moments of pure joy with fellow audience members. Prepare yourself for a comedy extravaganza that will leave you in stitches and create unforgettable memories during your stay in Brisbane!",
+  "Brisbane Ekka (Royal Queensland Show) (August)": "Brisbane Ekka, also known as the Royal Queensland Show, is an exhilarating annual event that captures the heart and soul of Queensland. Held in August, this agricultural extravaganza brings the countryside to the city, featuring thrilling rides, mouthwatering food stalls, and captivating live entertainment. As a tourist, you'll have the unique opportunity to witness impressive livestock displays, experience the excitement of carnival games, and indulge in the region's finest produce, all while immersing yourself in the warm and welcoming spirit of Queensland's rich agricultural heritage. Get ready for an unforgettable experience that showcases the very best of Queensland's culture, traditions, and fun-filled festivities!",
+  "Riverfire (September)": "Riverfire in September is an electrifying spectacle that lights up the skies of Brisbane in a breathtaking display of fireworks and excitement. As the grand finale of the Brisbane Festival, this annual event draws thousands of spectators to the banks of the Brisbane River for an unforgettable night. Prepare to be mesmerized by the dazzling pyrotechnics, vibrant colors, and choreographed fireworks that illuminate the city, creating an atmosphere of celebration and joy that you won't want to miss during your visit to Brisbane!",
+  "Paniyiri Greek Festival (May)": "Get ready for an exciting and vibrant experience at the Paniyiri Greek Festival in May! It's a captivating celebration of Greek culture that will transport you to the enchanting world of Greece. From the aroma of delicious Greek cuisine to the lively sounds of traditional music and dance, you'll be immersed in an unforgettable cultural extravaganza. Don't miss the chance to embrace the warmth and hospitality of the Greek community right here in Brisbane - the Paniyiri Festival promises to be an electrifying and joyous event for everyone!",
+  "Brisbane International Film Festival (BIFF) (October)": "When the Brisbane International Film Festival (BIFF) takes place in October, be ready for an amazing cinematic journey! It is an engrossing exhibition of regional and worldwide films that will take you to various settings and viewpoints. BIFF offers a wide and exhilarating movie-watching experience, with everything from compelling documentaries to enthralling features and engaging shorts. Don't pass up the opportunity to participate in this thrilling celebration of the art of filmmaking in Brisbane's downtown by missing the chance to immerse yourself in the magic of storytelling!",
+  "Christmas Events": "Prepare to be spellbound by Brisbane's dazzling Christmas celebrations! The holiday season comes to life with an abundance of happy celebrations, beautiful light displays, and cheery holiday markets. You'll be enveloped in the warmth and excitement of the holiday atmosphere, from the crowded South Bank Christmas Markets to the spellbinding lighting of the City Hall Christmas Tree. During this unique time of year, spend Christmas in Brisbane experiencing the magic with your loved ones and making lifelong memories!",
+  "Buddha Birth Day Festival (May)": "At the Buddha Birth Day Festival in May, be ready to enjoy and embrace the spirit of peace and enlightenment! This exciting celebration, which celebrates the birth of Buddha with cultural performances, seminars, and a broad variety of vegetarian treats, is held in the lovely South Bank Parklands. Enjoy the peaceful atmosphere while taking in the festivities, fascinating rituals, and mouthwatering food stalls that represent the wide range of Buddhist traditions. You can expect to have an illuminating and joyous experience at the Buddha Birth Day Festival that will leave you feeling inspired and connected to the true meaning of this profound and lengthy holiday.",
+  "Caxton Street Seafood and Wine Festival (May)": "Gear yourself for an exciting and delicious experience in May at the Caxton Street Seafood and Wine Festival! Your taste buds will be delighted by the huge selection of delectable seafood meals and superb wines from all across the region at this food and wine feast in the thriving Paddington neighborhood. Enjoy the finest seafood specialties, experience the complex flavors of world-class wines, and lose yourself in the festive ambiance and energetic environment. This event promises a day of culinary joy and excitement that you won't soon forget, whether you love seafood, wine, or are just seeking for a good time.",
+  "Woodford Folk Festival (December to January)": "Get ready for an extraordinary celebration of music, arts, and culture at the Woodford Folk Festival held from December to January! This iconic six-day event, located just north of Brisbane, brings together a diverse range of performances, workshops, and activities that cater to every interest and age group. From captivating live music performances to inspiring art installations and thought-provoking discussions, the festival offers an immersive experience that will leave you feeling enriched and inspired. Embrace the spirit of community, creativity, and joy as you become a part of this vibrant celebration that showcases the best of music, arts, and cultural diversity!"
+};
+
+
+for (const key in paragraphTexts) {
+  const eventDiv = document.createElement("div");
+  eventDiv.classList.add("events-div");
+
+  const heading = document.createElement("h2");
+  heading.textContent = key;
+
+  const image = document.createElement("img");
+  image.src = `../images/events_img/${key}.jpg`;
+
+  const content = document.createElement("p");
+  content.classList.add('event-paragraph');
+  content.textContent = paragraphTexts[key];
+
+  eventDiv.appendChild(heading);
+  eventDiv.appendChild(image);
+  eventDiv.appendChild(content);
+
+  eventContainer.appendChild(eventDiv);
+}

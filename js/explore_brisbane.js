@@ -56,5 +56,3 @@ topTenPlacesToVisit.forEach(place => {
 
   exploreBrisbaneContainer.appendChild(locationDiv);
 });
-
-console.log(places);
