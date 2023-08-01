@@ -18,8 +18,8 @@ const authenticateUser = (email, password) => {
   
   return new Promise((resolve, reject) => {
     // call API
+    let BASE_URL = "http://localhost:4000";
     // let BASE_URL = "https://studentlifebrisbane-api.onrender.com";
-    let BASE_URL = "https://studentlifebrisbane-api.onrender.com";
     let url = `${BASE_URL}/auth/login`;
     fetch(url, {
       method: "POST",
