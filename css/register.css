@@ -20,9 +20,10 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .form-img img {
     width: 150%;
-    height:500px;
+    height: 500px;
     margin-top: 10px;
     margin-left: -5px;
 }
@@ -64,7 +65,7 @@ input {
     width: 200px;
     margin-left: 100px;
     margin-right: 100px;
-    text-align:center;
+    text-align: center;
 }
 
 .form-class a {
