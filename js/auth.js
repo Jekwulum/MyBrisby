@@ -8,10 +8,6 @@ document.getElementById("submit").addEventListener("click", (e) => {
       sessionStorage.setItem("token", token);
       window.location.href = "dashboard.html";
     })
-    .catch(error => {
-      console.error(error);
-      alert("Invalid login credentials");
-    });
 });
 
 const authenticateUser = (email, password) => {
