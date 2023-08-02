@@ -86,6 +86,10 @@ body {
   margin: auto;
 }
 
+.loading-icon {
+  display: inline-block;
+}
+
 .card {
   margin: auto;
   margin-top: 25px;

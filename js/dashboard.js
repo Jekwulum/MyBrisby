@@ -44,6 +44,8 @@ function submitStaffData() {
   let password = document.getElementById("staff-password").value;
   let re_password = document.getElementById("staff-re-password").value;
 
+  let loadingIcon = document.getElementById('loading-icon');
+
   if (!name) {
     alert("name cannot be blank");
   } else if (!validateEmail(email)) {
@@ -53,6 +55,7 @@ function submitStaffData() {
   } else if (password !== re_password) {
     alert("passwords do not match");
   } else {
+    loadingIcon.style.display = "inline-block";
     let payload = { name, email, password, re_password };
     let url = `${BASE_URL}/auth/register`;
     fetch(url, {
@@ -64,6 +67,7 @@ function submitStaffData() {
       .then((data) => {
         if (data.status !== "SUCCESS") {
           alert(data.message);
+          loadingIcon.style.display = "none";
         }
         else {
           alert(data.message);
