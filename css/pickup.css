@@ -12,7 +12,7 @@
   background-image: url("../images/travel.png");
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top:150px;
+  margin-top: 150px;
   border-top: 5px solid rgb(34, 127, 203);
   padding: 50px 0px;
 }
@@ -182,6 +182,10 @@ select:hover {
   cursor: pointer;
   background: rgb(31, 135, 208);
   background: linear-gradient(90deg, rgba(31, 135, 208, 1) 0%, rgba(0, 212, 255, 1) 0%, rgba(34, 127, 203, 1) 58%);
+}
+
+.loading-icon {
+  display: inline-block;
 }
 
 
