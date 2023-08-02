@@ -64,25 +64,28 @@
           </a>
           <h1>New To Brisbane City?</h1>
           <div>
-            <input type="text" placeholder="Enter name" id="name"required>
-            <input type="email" placeholder="Enter email"  id="email" required>
-            <input type="tel" placeholder="Enter phone number"  id="tel" required>
+            <input type="text" placeholder="Enter name" id="name" required>
+            <input type="email" placeholder="Enter email" id="email" required>
+            <input type="tel" placeholder="Enter phone number" id="tel" required>
             <input type="text" placeholder="Enter your ideal accommodation" id="accommodation" required>
 
-            <select class="select-gender"id="gender" required>
+            <select class="select-gender" id="gender" required>
               <option value="">Select gender</option>
             </select>
 
             <div class="price-label-div">
               <label for="price-range" class="price-label">Select price range</label>
             </div>
-            <input name="price-range" type="range"  id="price-range" min="100" max="5000" step="1" value="100">
+            <input name="price-range" type="range" id="price-range" min="100" max="5000" step="1" value="100">
             <p id="rangeValue"></p>
             <select id="suburb-select" required>
               <option value="">Select your preferred location</option>
             </select>
             <!-- <input id="submit" type="submit" value="Submit" > -->
-            <button onclick="sendData()" class="submitBtn">send</button>
+            <button onclick="sendData()" class="submitBtn" id="submitBtn">
+              SEND
+              <span class="loading-icon" id="loading-icon" style="display: none;"><i class="fa-solid fa-spinner fa-spin" style="color: white;"></i></span>
+            </button>
             <p>Already have an account? <a href="#">Login here</a></p>
           </div>
         </div>
