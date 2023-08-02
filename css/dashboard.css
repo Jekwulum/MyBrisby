@@ -9,6 +9,16 @@ body {
   background: #EFECE5;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logout:hover {
+  color: gold;
+  cursor: pointer;
+}
+
 #loading-section {
   font-size: 100px;
   position: fixed;
@@ -27,6 +37,11 @@ body {
 .dashboard-container nav a {
   text-decoration: none;
   color: white;
+}
+
+.dashboard-container nav a:hover {
+  color: gold;
+  cursor: pointer;
 }
 
 .dashboard-container nav {

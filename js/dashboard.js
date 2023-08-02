@@ -29,6 +29,11 @@ window.addEventListener("DOMContentLoaded", () => {
     .catch(error => reject(error.message))
 });
 
+function logout() {
+  sessionStorage.removeItem("token");
+  window.location.href = 'sign_in.html';
+}
+
 function toggleAddStaff() {
   let addStaffDiv = document.getElementById("add-staff");
   if (addStaffDiv.style.display === "none") {
