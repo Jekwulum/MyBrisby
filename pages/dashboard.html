@@ -12,6 +12,7 @@
   <div class="dashboard-container">
     <nav>
       <a href="../index.html">Studentlifebrisbane</a>
+      <p onclick="logout()" class="logout" id="logout">Logout</p>
     </nav>
 
     <div class="body">
@@ -32,7 +33,11 @@
           <input type="email" id="staff-email" placeholder="enter email">
           <input type="password" id="staff-password" placeholder="enter password">
           <input type="password" id="staff-re-password" placeholder="re-enter password">
-          <button onclick="submitStaffData()">submit</button>
+          <button onclick="submitStaffData()" class="submitBtn" id="submitBtn">
+            submit
+            <span class="loading-icon" id="loading-icon" style="display: none;"><i class="fa-solid fa-spinner fa-spin"
+                style="color: white;"></i></span>
+          </button>
         </div>
       </div>
 

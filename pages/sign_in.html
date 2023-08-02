@@ -17,18 +17,25 @@
         <image src="../images/brisby-logoe.png"></image>
       </a>
       <h1>Welcome To Brisbane</h1>
-      <form>
+      <div>
         <span>
           <input id="email" type="email" placeholder="enter your email">
           <input id="password" type="password" placeholder="enter your password">
-          <input id="submit" type="submit" value="Login">
+          <!-- <input id="submit" type="submit" value="Login"> -->
+          <button class="submitBtn" id="submitBtn">
+            SEND
+            <span class="loading-icon" id="loading-icon" style="display: none;"><i class="fa-solid fa-spinner fa-spin"
+                style="color: white;"></i></span>
+          </button> <br>
+
           <a href="#">forget password?</a><br><br>
           <p class="register-btn">Don't have an account? <a href="register.html">Register here</a></p>
         </span>
-      </form>
+      </div>
     </div>
   </div>
 </body>
+<script src="https://kit.fontawesome.com/68ead2588d.js" crossorigin="anonymous"></script>
 <script src="../js/auth.js"></script>
 
 </html>

@@ -131,6 +131,10 @@ select {
     color: gold;
 }
 
+.loading-icon {
+    display: inline-block;
+}
+
 .form-class a {
     text-decoration: none;
     color: rgb(34, 127, 203);

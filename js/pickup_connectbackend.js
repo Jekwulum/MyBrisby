@@ -11,6 +11,8 @@ function sendData() {
   let flight_number = document.getElementById('flight_number').value;
   let passengers = Number(document.getElementById('total_passengers').textContent);
 
+  let loadingIcon = document.getElementById('loading-icon');
+
   if (!name) {
     alert("name cannot be blank");
   }
@@ -18,6 +20,7 @@ function sendData() {
     alert('Invalid email');
   }
   else {
+    loadingIcon.style.display = "inline-block";
     let payload = { name, email, phone, gender, school, airport_name, destination, pickup_date, flight_number, passengers };
     console.log(payload)
     let url = `${BASE_URL}/services/booking`;
@@ -33,7 +36,8 @@ function sendData() {
           alert(data.message);
         }
         else {
-          alert(data.message);
+          alert("Request sent. Someone will be in touch with you shortly");
+          window.location.href = 'pickup.html';
         }
       })
       .catch(error => {

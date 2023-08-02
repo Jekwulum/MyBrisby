@@ -1,4 +1,4 @@
-document.getElementById("submit").addEventListener("click", (e) => {
+document.getElementById("submitBtn").addEventListener("click", (e) => {
   e.preventDefault();
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
@@ -13,6 +13,9 @@ document.getElementById("submit").addEventListener("click", (e) => {
 const authenticateUser = (email, password) => {
   
   return new Promise((resolve, reject) => {
+    let loadingIcon = document.getElementById('loading-icon');
+    loadingIcon.style.display = "inline-block";
+
     // call API
     // let BASE_URL = "http://localhost:4000";
     let BASE_URL = "https://studentlifebrisbane-api.onrender.com";
@@ -27,6 +30,8 @@ const authenticateUser = (email, password) => {
           return response.json();
         }
         else {
+          alert("Invalid credentials");
+          loadingIcon.style.display = "none";
           throw new Error("Authentication failed");
         }
       })
