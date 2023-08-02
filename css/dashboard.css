@@ -24,6 +24,10 @@ body {
   align-items: center;
 }
 
+.dashboard-container nav a {
+  text-decoration: none;
+  color: white;
+}
 
 .dashboard-container nav {
   background-color: rgb(34, 127, 203);
@@ -50,28 +54,35 @@ body {
   color: white;
   border-radius: 4px;
 }
-.d-first button:hover{
+
+.d-first button:hover {
   cursor: pointer;
 }
-.add-staff{
+
+.add-staff {
   margin: 0 auto;
   margin-top: 10px;
   display: none;
   flex-direction: column;
-  width: 350px;
+  width: 450px;
   padding: 10px 5px;
 }
 
-.add-staff input{
+.add-staff h3 {
+  text-align: center;
+}
+
+.add-staff input {
   width: 95%;
-  margin-bottom: 5px;
-  height: 30px;
+  margin-bottom: 10px;
+  height: 35px;
   border: none;
   outline: none;
   padding: 5px;
+  color: rgb(34, 127, 203);
 }
 
-.add-staff button{
+.add-staff button {
   margin: auto;
 }
 
@@ -164,13 +175,17 @@ body {
   border-radius: 3px;
 }
 
-.resolve-button:hover{
+.resolve-button:hover {
   cursor: pointer;
 }
 
 @media screen and (max-width:600px) {
   .d-first h2 {
     font-size: 20px;
+  }
+
+  .add-staff {
+    width: 350px;
   }
 
   .card {
