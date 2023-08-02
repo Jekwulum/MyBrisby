@@ -59,7 +59,12 @@
         <input type="text" id="contact-us-name" placeholder="name">
         <input type="email" id="contact-us-email" placeholder="email">
         <textarea name="" id="contact-us-message" cols="30" rows="10" placeholder="Message"></textarea>
-        <button id="contact-us-btn">Contact Us</button>
+        <button onclick="sendData()" class="submitBtn" id="contact-us-btn">
+          <p>SEND</p>
+          <span class="loading-icon" id="loading-icon" style="display: none;"><i
+              class="fa-solid fa-spinner fa-spin" style="color: white;"></i>
+          </span>
+        </button>
       </div>
 
       <ul class="enquiries">
@@ -76,7 +81,7 @@
             <ul>
               <li><a href="about-us.html">about us</a></li>
               <li><a href="contact-us.html">contact us</a></li>
-              <li><a href="#"></a></li>
+              <!-- <li><a href="#"></a></li> -->
               <li><a href="../pages/sign_in.html">Sign in</a></li>
               <!-- <li><a href="../pages/register.html">Register</a></li> -->
             </ul>
