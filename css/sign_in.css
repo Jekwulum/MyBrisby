@@ -58,16 +58,27 @@ input {
     box-shadow: 2px 2px 2px grey;
 }
 
-#submit {
+.submitBtn {
     background: rgb(34, 127, 203);
     color: white;
-    width: 200px;
-    margin-left: 100px;
-    margin-right: 100px;
+    width: 150px;
+    padding: 10px 0 25px 0;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: all 0.6s ease;
+    border: none;
+    border-radius: 4px;
 }
 
-#submit:hover{
+.submitBtn:hover {
     cursor: pointer;
+    color: gold;
+}
+
+.loading-icon {
+    display: inline-block;
 }
 
 .form-class a {
