@@ -158,6 +158,14 @@ select:hover {
   font-weight: bold;
 }
 
+.notice {
+  margin-left: 10px;
+}
+
+.input-div-text .notice {
+  color: rgb(104, 100, 100);
+}
+
 .button-div {
   width: 75%;
   margin: 0px auto;
